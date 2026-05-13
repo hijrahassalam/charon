@@ -1,7 +1,16 @@
 {
   "_comment": "Charon strategy config — exported from SQLite for git tracking",
-  "_updated": "2026-05-14T06:27:00+08:00",
-  "_branch": "config/v1-baseline",
+  "_updated": "2026-05-14T06:40:00+08:00",
+  "_branch": "config/v3-gmgn-fee-5",
+  "_experiment": {
+    "id": 1,
+    "variable": "min_gmgn_total_fee_sol",
+    "baseline": 10,
+    "test_value": 5,
+    "hypothesis": "More quality candidates pass filter, increasing trade frequency",
+    "started": "2026-05-14T06:40:00+08:00",
+    "duration": "48h"
+  },
   "sniper": {
     "enabled": true,
     "entry_mode": "immediate",
@@ -11,7 +20,7 @@
     "min_mcap_usd": 7000,
     "max_mcap_usd": 200000,
     "min_fee_claim_sol": 0.5,
-    "min_gmgn_total_fee_sol": 10,
+    "min_gmgn_total_fee_sol": 5,
     "min_holders": 0,
     "max_top20_holder_percent": 100,
     "min_saved_wallet_holders": 0,
