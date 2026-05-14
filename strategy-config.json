@@ -1,0 +1,53 @@
+{
+  "_comment": "Charon strategy config — Experiment #2 (multi-param)",
+  "_updated": "2026-05-14T18:30:00+08:00",
+  "_branch": "config/v4-min-mcap-25k",
+  "_experiment": {
+    "id": 2,
+    "variable": "min_mcap_usd + trailing_percent + sl_percent",
+    "changes": {
+      "min_mcap_usd": { "from": 7000, "to": 25000 },
+      "trailing_percent": { "from": 20, "to": 10 },
+      "sl_percent": { "from": -25, "to": -15 }
+    },
+    "hypothesis": "1) Filter low mcap noise. 2) Lock profit faster with tighter trailing. 3) Cut losses faster with tighter SL.",
+    "data_evidence": "6/10 SL trades reached +10% but ended negative. Josh +65%→-51%, USSR +44%→-39%.",
+    "started": "2026-05-14T18:30:00+08:00",
+    "duration": "48h"
+  },
+  "sniper": {
+    "enabled": true,
+    "entry_mode": "immediate",
+    "min_source_count": 2,
+    "require_fee_claim": true,
+    "token_age_max_ms": 3600000,
+    "min_mcap_usd": 25000,
+    "max_mcap_usd": 200000,
+    "min_fee_claim_sol": 0.5,
+    "min_gmgn_total_fee_sol": 10,
+    "min_holders": 0,
+    "max_top20_holder_percent": 100,
+    "min_saved_wallet_holders": 0,
+    "max_ath_distance_pct": 0,
+    "min_graduated_volume_usd": 0,
+    "trending_min_volume_usd": 0,
+    "trending_min_swaps": 0,
+    "trending_max_rug_ratio": 0.3,
+    "trending_max_bundler_rate": 0.5,
+    "position_size_sol": 0.1,
+    "max_open_positions": 3,
+    "tp_percent": 50,
+    "sl_percent": -15,
+    "trailing_enabled": true,
+    "trailing_percent": 10,
+    "partial_tp": false,
+    "partial_tp_at_percent": 0,
+    "partial_tp_sell_percent": 0,
+    "max_hold_ms": 0,
+    "use_llm": true,
+    "llm_min_confidence": 50
+  },
+  "dip_buy": { "enabled": false },
+  "smart_money": { "enabled": false },
+  "degen": { "enabled": false }
+}
