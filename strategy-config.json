@@ -1,7 +1,13 @@
 {
-  "_comment": "Charon strategy config — exported from SQLite for git tracking",
-  "_updated": "2026-05-14T06:27:00+08:00",
+  "_comment": "Charon strategy config — REVERTED to baseline after Experiment #1 failure",
+  "_updated": "2026-05-14T18:15:00+08:00",
   "_branch": "config/v1-baseline",
+  "_experiment_1_result": {
+    "variable": "min_gmgn_total_fee_sol",
+    "change": "10 → 5",
+    "result": "FAILED — 0% win rate, -45.24% avg PnL (6 trades, all SL)",
+    "reverted": "2026-05-14T18:15:00+08:00"
+  },
   "sniper": {
     "enabled": true,
     "entry_mode": "immediate",
